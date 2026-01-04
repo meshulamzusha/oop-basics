@@ -1,9 +1,10 @@
 function Rectangle(width, height) {
     this.width = width;
     this.height = height;
-    this.area = function() {
-        return width * height
-    }
+}
+
+Rectangle.prototype.area = function () {
+    return this.width * this.height
 }
 
 //example run

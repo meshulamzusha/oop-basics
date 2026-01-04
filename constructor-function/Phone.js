@@ -1,9 +1,10 @@
 function Phone(brand, model) {
     this.brand = brand;
     this.model = model;
-    this.details = function() {
-        console.log(`Phone: ${this.brand} ${this.model}`);  
-    }
+}
+
+Phone.prototype.details = function() {
+    console.log(`Phone: ${this.brand} ${this.model}`);  
 }
 
 //example run

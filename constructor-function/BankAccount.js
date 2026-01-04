@@ -1,21 +1,24 @@
 function BankAccount(owner, balance) {
     this.owner = owner;
     this.balance = balance;
-    this.deposit = function(amount) {
-        this.balance += amount;
+}
+
+BankAccount.prototype.deposit = function (amount) {
+    this.balance += amount;
+    console.log(this.balance);
+}
+
+BankAccount.prototype.withdraw = function (amount) {
+    if (this.balance - amount > 0) {
+        this.balance -= amount;
         console.log(this.balance);
+    } else {
+        console.log("There is not enough");
     }
-    this.withdraw = function(amount) {
-        if (this.balance - amount > 0) {
-            this.balance -= amount;
-            console.log(this.balance);
-        } else {
-            console.log("There is not enough");
-        }
-    }
-    this.checkBalance = function() {
-        console.log(this.balance);
-    }
+}
+
+BankAccount.prototype.checkBalance = function () {
+    console.log(this.balance);
 }
 
 //example run
